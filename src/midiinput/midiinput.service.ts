@@ -3,9 +3,6 @@ import * as JZZ from 'jzz';
 
 @Injectable()
 export class MidiinputService {
-  midi: any = {};
-  inputs: any = {};
-
   async getInputs(): Promise<string[]> {
     const access = await JZZ.requestMIDIAccess();
     const inMidi = access.inputs;
