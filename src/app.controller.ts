@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello() {
-    this.appService.inicializaDb();
+  async getHello() {
+    return await this.appService.inicializaDb();
   }
 }
